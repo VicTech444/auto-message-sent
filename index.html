@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Testing folder</title>
+</head>
+
+<body class="dp-grid">
+    <section class="container dp-grid">
+        <div class="email-list of-auto ">
+        </div>
+        <div class="email-information dp-grid padding-20">
+            <div class="empty-container dp-grid">
+                <div class="fs-22 of-auto">
+                    <div class="introduction">Welcome, the date today is: <span id="date-now"></span></div>
+                </div>
+            </div>
+            <div class="container-with-info dp-grid hidden">
+            </div>
+            <div class="manual-message-container dp-flex">
+                <div class="message-input-container dp-flex">
+                    <input class="local-input-button-styles" type="text" id="manual-message">
+                </div>
+                <div class="manual-message-options dp-flex">
+                    <button id="send-manual-message" class="local-input-button-styles">Send</button>
+                    <div class="open-auto-message" title="Open auto message program">
+                        <svg width="38" height="38" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21.941 14.244L14.119 10.236C12.686 9.50176 11 10.5696 11 12.2115V19.7885C11 21.4304 12.686 22.4982 14.119 21.764L21.941 17.756C23.353 17.0325 23.353 14.9675 21.941 14.244Z"
+                                fill="#3ac" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="auto-message-program dp-flex fd-column hidden">
+            <div class="closing-menu dp-flex">
+                <svg width="38" height="38" viewBox="7.7 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.3334 22.6667L21.3334 9.33335" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                    <path d="M26.6667 22.6667L26.6667 9.33335" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="program-main-body dp-flex fd-column">
+                <label>Do you want to pick: 
+                    <p>
+                        <small>There's a total of <small id="amount-emails"></small> emails available</small>
+                    </p>
+                </label>
+                
+                <div class="program-options dp-flex fd-column">
+                    <div class="select-all dp-flex">
+                        <input type="radio" id="all-messages" name="all-personalize" checked><label
+                            for="all-messages">All
+                            messages</label>
+                    </div>
+                    <div class="personalize dp-flex">
+                        <input type="radio" id="personalize" name="all-personalize"><label
+                            for="personalize">Personalize</label>
+                    </div>
+                </div>
+                <div class="program-menu dp-flex fd-column">
+                    <div class="start-from hidden">
+                        <label for="start-from">From where do you want to start?</label>
+                        <input type="number" id="start-from" min="1" class="input-general-styles" required>
+                    </div>
+                    <div class="end-to hidden">
+                        <label for="end-to">Where do you want to stop?</label>
+                        <input type="number" id="end-to" class="input-general-styles" required>
+                    </div>
+                    <div class="auto-message-to-send">
+                        <label>Write the message you wish to send to the emails</label>
+                        <textarea name="" cols="30" rows="4" class="input-general-styles"
+                            id="auto-message" required></textarea>
+                    </div>
+                </div>
+                <div class="accept-message-container dp-flex fd-column">
+                    <div class="error-message"></div>
+                    <button class="input-general-styles button-general-styles" id="accept-automessage">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="confirm-automessage dp-flex hidden fd-column">
+            <header>
+                <h1>You are going to do this:</h1>
+            </header>
+            <div class="end-start-container">
+                <div class="starting-from">
+                    <label>You are starting from: <span id="start-span"></span></label>
+                </div>
+                <div class="ending-to">
+                    <label>You are ending to: <span id="end-span"></span></label>
+                </div>
+            </div>
+            <div class="message-sent">
+                <label>The message you are about to send is:</label>
+                <textarea id="message-to-send-textarea" class="textarea-styles input-general-styles" rows="3"
+                    disabled></textarea>
+            </div>
+            <div class="confirm dp-flex">
+                <button class="input-general-styles button-general-styles" id="confirm-automessage">Confirm</button>
+                <button class="input-general-styles button-general-styles" id="cancel-automessage">Cancel</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

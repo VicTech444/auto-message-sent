@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "C:\\Users\\Victor\\Desktop\\repository\\test-folder\\script.ts",
+            "runtimeExecutable": "C:\\Program Files\\nodejs"
+        }
+    ]
+}

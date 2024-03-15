@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    height: 100vh;
+    place-content: center;
+    padding: 30px;
+}
+
+.dp-grid {
+    display: grid;
+}
+
+.dp-flex {
+    display: flex;
+}
+
+.fd-column {
+    flex-direction: column;
+}
+
+.of-auto {
+    overflow: auto;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.container {
+    grid-template-columns: minmax(200px, 300px) minmax(300px, 550px);
+    grid-template-rows: 400px;
+}
+
+.email-list {
+    background-color: #4c5858;
+    border-radius: 15px 0 0 15px;
+    color: #ffffff;
+    font-size: 17px;
+    
+    & div {
+        padding: 20px;
+        border: 1px solid black;
+    }
+    
+    &::-webkit-scrollbar {
+        width: 10px; 
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #888;
+    }
+}
+
+.email-information {
+    background-color: #3d3d3d;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 290px 50px;
+    gap: 20px;
+
+    & .empty-container, .container-with-info{
+        grid-template-rows: 55px 115px;
+    }
+
+    & .container-with-info {
+        overflow: auto;
+        
+        &::-webkit-scrollbar{
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb{
+            background-color:#615e5e;
+        }
+    }
+
+    & .email-name-container{
+        margin-bottom: 15px;
+    }
+}
+
+.fs-22 { font-size: 22px; }
+
+.email-body {
+    font-size: 18px;
+    padding-bottom: 10px;
+
+    & .response {
+        display: flex;
+        align-self: flex-end;
+        background-color: rgba(190, 190, 190, 0.795);
+        color: #000;
+        border-radius: 10px 0 0 10px;
+        font-size: 18px;
+        justify-content: flex-end;
+        margin-top: 20px;
+        padding: 15px 20px 15px 15px;
+        width: 65%;
+    }
+
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+        color:#3d3d3d;
+    }
+}
+
+.manual-message-container {
+    column-gap: 10px;
+
+    & .message-input-container {
+        width: 80%;
+    }
+
+    & .local-input-button-styles {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+        border: 1px solid rgb(182, 181, 181);
+        outline: none;
+        border-radius: 7px;
+    }
+
+    & .manual-message-options {
+        width: 40%;
+    }
+}
+
+.auto-message-program {
+    background-color: #364444;
+    border-radius: 7px;
+    color: #ececec;
+    justify-self: center;
+    position: absolute;
+    row-gap: 6px;
+    top: 15%;
+    width: 350px;
+
+    & .closing-menu {
+        background-color: #262626;
+        border-radius: 7px 7px 0 0;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    & .program-main-body {
+        row-gap: 15px;
+        padding: 10px;
+    }
+
+    & .program-options {
+        row-gap: 4px;
+
+        & input {
+            margin-right: 5px;
+        }
+    }
+
+    & .program-menu {
+        row-gap: 15px;
+
+        & input,
+        textarea {
+            width: 100%;
+            margin-top: 5px;
+        }
+    }
+
+    & .accept-message-container {
+        text-align: center;
+
+        & .error-message{
+            aspect-ratio: 1 / 0.1;
+            margin-bottom: 10px;
+        }
+
+        & #accept-automessage{
+            justify-content: center;
+            align-self: center;
+        }
+    }
+}
+
+.confirm-automessage {
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 10px;
+    justify-self: center;
+    padding: 15px;
+    position: absolute;
+    row-gap: 10px;
+    width: 300px;
+
+    & header,
+
+    .confirm {
+        justify-content: center;
+        column-gap: 10px;
+    }
+}
+
+.input-general-styles {
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+
+.button-general-styles {
+    justify-self: center;
+    width: 100px;
+}
+
+.textarea-styles {
+    margin-top: 5px;
+    width: 100%;
+    font-size: 18px;
+    resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+:disabled {
+    background-color: rgb(224, 223, 223);
+    color: rgb(133, 133, 133)
+}
+
+.date-now{
+    width: 100%;
+    display: block;
+}
+@media (min-width: 360px) and (max-width: 660px) {
+
+    .container {
+        grid-template-columns: minmax(200px, 500px);
+        grid-template-rows: 200px 300px;
+    }
+
+    .email-information {
+        grid-template-rows: 200px 40px;
+
+        & .email-name {
+            font-size: 21px;
+        }
+
+        & .email-body {
+            font-size: 16px;
+        }
+    }
+
+    .email-list,
+    .email-information {
+        border-radius: 0;
+    }
+
+    .email-list {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .email-information {
+        border-radius: 0 0 15px 15px;
+    }
+
+    .auto-message-program {
+        top: 10%;
+        width: 270px;
+    }
+}
